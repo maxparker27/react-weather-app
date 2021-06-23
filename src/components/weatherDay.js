@@ -1,5 +1,6 @@
 import rainImage from "./rainImage.gif";
 import cloudImage from "./cloudImage.gif";
+import sunImage from "./sunImage.gif";
 
 function determineImage(forecast) {
     if (forecast.includes("rain")) {
@@ -7,6 +8,9 @@ function determineImage(forecast) {
     }
     else if (forecast.includes("cloud")) {
         return <img  className = "forecastImage" src = {cloudImage} alt = "cloud gif to show that there are clouds"/>
+    }
+    else if (forecast.includes("clear") || forecast.includes("sun")) {
+        return <img  className = "forecastImage" src = {sunImage} alt = "sun gif to show that there is sun"/>
     }
 }
 
@@ -25,16 +29,13 @@ function WeatherDay(props) {
         <div>
             <div className = "allDays">
                 <div className = {props.className}>
-                    <h3 className = "weekdays">Weekday: {props.day}</h3>
+                    <h3 className = "weekdays"><b>Weekday: </b>{props.day}</h3>
                     <div>{determineImage(props.description)}</div>
                     <div className = "allInformationAboutDays">
-                        <div className = "temperatures">Temperature: {props.temperature}°</div>
-                        <div className = "feelslikes">Feels Like: {props.feelsLike}°</div>
-                        <div className = "aligningDescriptions">
-                            <div className = "descriptions">Forecast:</div>
-                            <div className = "descriptionsText">{props.description}</div>
-                        </div>
-                        <div className = "humidities">Humidity: {props.humidity}%</div>
+                        <div className = "temperatures"><b>Temperature: </b>{props.temperature}°</div>
+                        <div className = "feelslikes"><b>Feels Like: </b>{props.feelsLike}°</div>
+                        <div className = "descriptionsText"><b>Forecast: </b><i>{props.description}</i></div>
+                        <div className = "humidities"><b>Humidity: </b>{props.humidity}%</div>
                     </div>
                 </div>
             </div>

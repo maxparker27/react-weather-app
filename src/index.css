@@ -1,14 +1,19 @@
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom right, darkblue, whitesmoke);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(58, 109, 168),
+    whitesmoke
+  );
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .container {
@@ -22,24 +27,32 @@ code {
 
 .allDays {
   float: left;
-  background-image: linear-gradient(to bottom right, lightblue, whitesmoke);
+  background-color: linear-gradient(to bottom right, lightblue, whitesmoke);
   width: 17.6%;
   height: 70vh;
   margin-left: 2%;
   border-radius: 20px;
   text-align: left;
+  transition: 0.8s ease;
+  margin-top: 2%;
+}
+
+.allDays:hover {
+  transform: scale(1.05);
+  background-color: rgb(88, 136, 175);
 }
 
 .weekdays {
   margin-left: 10px;
   font-size: 12pt;
   text-align: center;
-  background: white;
+  background: rgb(231, 231, 231);
   border-radius: 10px;
   align-items: center;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
+  height: 30px;
 }
 
 .myHeader {
@@ -48,32 +61,12 @@ code {
   text-align: left;
 }
 
-.aligningDescriptions {
-  width: 100%;
-  overflow: hidden;
-}
-
-.descriptions {
-  width: 32%;
-  float: left;
-  margin: auto;
-}
-
 .temperatures {
   margin-top: 20px;
 }
 
-.descriptionsText {
-  width: 68%;
-  font-style: italic;
-  float: left;
-}
-
-.humidities {
-}
-
 .allInformationAboutDays {
-  margin-top: 80px;
+  margin-top: 30%;
   display: flex;
   flex-direction: column;
   line-height: 2;
@@ -81,12 +74,19 @@ code {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  background: white;
+  background-color: rgb(231, 231, 231);
   align-items: left;
   text-indent: 5%;
   color: black;
-  font-size: 12pt;
+  font-size: 14pt;
   border-radius: 20px;
+  transition: 0.2s ease;
+}
+
+.allInformationAboutDays:hover {
+  background-color: rgb(65, 65, 68);
+  transform: scale(1.3);
+  color: white;
 }
 
 img.forecastImage {
@@ -95,5 +95,6 @@ img.forecastImage {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  height: 80%;
+  height: 270px;
+  border-radius: 20px;
 }

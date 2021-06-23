@@ -1,31 +1,31 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
-import {WeatherDay} from "./weatherDay";
-import {Header} from "./weatherDay";
+import {WeatherDay} from "./components/weatherDay";
+import {Header} from "./components/weatherDay";
 
 const url = "https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&units=metric&exclude=minutely,hourly&appid=$"
 
 
 function dealWithDate(date) {
-  if (date === 0 || date >= 7) {
+  if (date === 0 || date === 7) {
     return ("Sunday");
   }
-  else if (date === 1 || date >= 8) {
+  else if (date === 1 || date === 8) {
     return ("Monday");
   }
-  else if (date === 2 || date >= 9) {
+  else if (date === 2 || date === 9) {
     return ("Tuesday");
   }
-  else if (date === 3 || date >= 10) {
+  else if (date === 3 || date === 10) {
     return ("Wednesday");
   }
-  else if (date === 4 || date >= 11) {
+  else if (date === 4 || date === 11) {
     return ("Thursday");
   }
-  else if (date === 5 || date>= 12) {
+  else if (date === 5 || date === 12) {
     return ("Friday");
   }
-  else if (date === 6 || date>= 13) {
+  else if (date === 6 || date === 13) {
     return ("Saturday");
   }
 }
