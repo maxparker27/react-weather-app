@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import {WeatherDay} from "./weatherDay";
 import {Header} from "./weatherDay";
 
-const url = "https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&units=metric&exclude=minutely,hourly&appid=fc1c9aa027eef9020d7eac1dce5d07d0"
+const url = "https://api.openweathermap.org/data/2.5/onecall?lat=51.5074&lon=0.1278&units=metric&exclude=minutely,hourly&appid=$"
 
 
 function dealWithDate(date) {
